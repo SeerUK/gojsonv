@@ -39,6 +39,8 @@ func ValidateCommand() gonsole.Command {
 		if !result.Valid() {
 			fmt.Println("The input appears to be invalid. Here are the problems:")
 
+			// @todo: This should show the actual path to the node with the problem. Not just the
+			// @todo: field name of the problem.
 			for _, desc := range result.Errors() {
 				fmt.Printf("- %s\n", desc)
 			}
